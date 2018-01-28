@@ -1,0 +1,29 @@
+<form method="POST" action="mission_1-5.php">
+<!--method:どのようにデータを送信するか。POSTまたはGET。action:データの送信先-->
+
+<input type="text" name="コメント" value="" size="">
+<!--input type属性:1行の入力フィールド。name属性:入力されたデータとセットで送られる名前-->
+<!--value属性:入力フィールドには不要。size属性:入力欄の横幅（文字数）-->
+
+<input type="submit" name="" value="送信">
+<!--送信ボタン。value属性:送信ボタンに表示させる文字。-->
+
+</form>
+
+<?php
+$comment=$_POST['コメント'];
+//変数$commentの指定と、フォームに入力されたデータ'コメント'を受け取る;
+
+$filename = 'mission_1-5.txt';
+//echo $filename;
+
+$fp = fopen($filename, 'w');
+//fopen関数：$filenameというファイルをwモード(=write書き込み)で開く;
+
+fwrite($fp, '$comment');
+//fwrite関数：開いたファイルに'$comment'を書き込む;
+
+fclose($fp);
+//fclose関数：開いていたファイルを閉じる;
+
+?>
