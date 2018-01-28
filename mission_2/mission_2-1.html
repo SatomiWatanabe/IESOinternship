@@ -1,0 +1,26 @@
+﻿<title>アイスクリーム日記</title>
+<!--タイトルタグ。ブラウザの上部に表示される。-->
+
+<h1>アイスクリーム日記</h1>
+<!--見出しタグ。数字は1～6で、<h1>が最上位の見出し（大見出し）、小さくなるにつれて下位の見出し（小見出し）になる。-->
+
+<form method="POST" action="mission_2-1.php">
+<!--method:どのようにデータを送信するか。POSTまたはGET。action:データの送信先-->
+
+<input type="text" name="name" value="" size="" placeholder="名前">
+<!--input type属性:1行の入力フィールド。name属性:入力されたデータとセットで送られる名前
+value属性:入力フィールドには不要。size属性:入力欄の横幅（文字数）
+placeholder属性：入力前のフォームに薄く表示される文字-->
+
+<br>
+<!--改行（HTML）。-->
+
+<textarea name="comment" cols="50" rows="5" value="" size="" placeholder="コメント"></textarea>
+<!--textarea:複数行の入力フィールド。colsで横幅（文字数）、rowsで行数を指定する。-->
+
+<br>
+
+<input type="submit" name="" value="send">
+<!--送信ボタン。value属性:送信ボタンに表示させる文字。-->
+
+</form>
